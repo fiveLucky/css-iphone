@@ -1,0 +1,57 @@
+div {
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  width: var(--boxWidth);
+  height: var(--boxHeight);
+  margin: 0 auto;
+  background-color: var(--containerBgColor);
+  margin-top: 100px;
+  border-radius: 50px;
+  padding: var(--containerPadding);
+}
+
+
+.layer-one {
+  width: 100%;
+  height: 100%;
+  background-color: var(--layerOneBgColor);
+  border-radius: 50px;
+  padding: var(--layerOnePadding);
+  filter: blur(1px);
+}
+
+.layer-two {
+  width: 100%;
+  height: 100%;
+  background-color: var(--layerTwoBgColor);
+  border-radius: 43px;
+  padding: var(--layerTwoPadding);
+}
+
+.layer-three {
+  width: 100%;
+  height: 100%;
+  background-color: var(--layerThreeBgColor);
+  border-radius: 45px;
+  padding: var(--layerThreePadding);
+  filter: blur(1px);
+}
+
+.layer-four {
+  width: 100%;
+  height: 100%;
+  background-color: var(--layerFourBgColor);
+  border-radius: 31px;
+  filter: blur(1px);
+  padding: var(--layerFourPadding)
+}
+
+.layer-five {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/bizhi.jpeg');
+  border-radius: 25px;
+}
