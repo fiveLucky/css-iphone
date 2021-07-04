@@ -19,6 +19,10 @@
   --layer-four-bg-color: rgba(0, 0, 0);
   --forehead-bg-color: rgba(0, 0, 0);
   --phone-receiver-bg-color: rgba(82, 82, 82, 0.4);
+  --camera-bg-color: rgb(32, 32, 32);
+  --camera-layer-one-bg-color: rgb(49, 49, 49);
+  --camera-layer-two-bg-color: linear-gradient(135deg, white, #3f3fff, #00ff7e);
+  --antenna-bg-color: #3a3a3a;
 
 
 }
