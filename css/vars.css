@@ -25,4 +25,8 @@
   --antenna-bg-color: #3a3a3a;
   --button-left-bg-color: linear-gradient(to right, white, black);
   --button-right-bg-color: linear-gradient(to left, white, black);
+  --click-animation-bg-color: rgba(0, 0, 0, 0.2);
+
+
+
 }

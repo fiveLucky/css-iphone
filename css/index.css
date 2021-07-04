@@ -2,6 +2,17 @@ div {
   box-sizing: border-box;
 }
 
+input {
+  display: block;
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  padding: 0;
+  border: 0;
+  color: transparent;
+  box-sizing: border-box;
+}
+
 .container {
   position: relative;
   width: var(--box-width);
@@ -107,18 +118,6 @@ div {
 
 /* 按键 */
 
-.buttons a {
-  display: block;
-  box-sizing: border-box;
-}
-
-.buttons a:not(.power):active {
-  left: -2px;
-}
-
-.buttons a.power:active {
-  right: -2px;
-}
 
 .sounds-switch {
   position: absolute;
@@ -167,6 +166,89 @@ div {
   cursor: pointer;
 }
 
+.sounds-show {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+  background: #99adc2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s linear;
+}
+
+
+.text {
+  font-size: 18px;
+}
+
+.icon {
+  font-size: 70px;
+}
+
+.progress {
+  width: 100%;
+  height: 8px;
+  background-color: black;
+  margin-top: 10px;
+  display: flex;
+  padding: 1px;
+}
+
+.progress-item {
+  flex: 1;
+  height: 100%;
+  border-right: 1px solid;
+  background: white;
+}
+
+.progress-item:last-child {
+  border-right: 0;
+}
+
+.sounds-show-silence {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+  background: #99adc2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s linear;
+}
+
+
+.lock-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 0;
+  height: 0;
+  background-image: url('../images/lock.png');
+  background-size: contain;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
 /* 屏幕显示 */
 
 .display-layer {
@@ -176,9 +258,9 @@ div {
   transform: translate(-50%, -50%);
   height: calc(var(--box-height) - var(--display-layer-padding) * 2);
   width: calc(var(--box-width) - var(--display-layer-padding) * 2);
+  border-radius: 25px;
   background-image: url('../images/home.jpeg');
   background-size: contain;
-  border-radius: 25px;
 }
 
 .forehead {
@@ -254,29 +336,6 @@ div {
   filter: opacity(0.6);
 }
 
-.screen input.wechat:active {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-
-
-.wechat-icon {
-  display: block;
-  position: absolute;
-  bottom: 25px;
-  right: 63px;
-  z-index: 10;
-  width: 51px;
-  height: 51px;
-  /* background-color: black; */
-  border-radius: 11px;
-  cursor: pointer;
-  background: transparent;
-  outline: none;
-  padding: 0;
-  border: 0;
-  color: transparent;
-}
 
 .wechat {
   position: absolute;
@@ -285,11 +344,112 @@ div {
   right: 0;
   bottom: 0;
   transition: all 0.5s;
+  border-radius: 25px;
 }
 
+.wechat-icon {
+  position: absolute;
+  bottom: 25px;
+  right: 63px;
+  z-index: 10;
+  width: 51px;
+  height: 51px;
+  border-radius: 11px;
+}
+
+
+.setting {
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.5s;
+  border-radius: 25px;
+}
+
+.setting-icon {
+  position: absolute;
+  top: -399px;
+  right: 25px;
+  z-index: 10;
+  width: 51px;
+  height: 51px;
+  border-radius: 11px;
+}
+
+
+.safari {
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.5s;
+  border-radius: 25px;
+}
+
+.safari-icon {
+  position: absolute;
+  bottom: 25px;
+  right: 139px;
+  z-index: 10;
+  width: 51px;
+  height: 51px;
+  border-radius: 11px;
+}
+
+/* 按键交互 */
+
+/* 声音按键交互 */
+
+.buttons input:not(.power):active {
+  left: -2px;
+}
+
+.buttons input.power:active {
+  right: -2px;
+}
+
+.sounds:focus-within .sounds-show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.silence:focus-within .sounds-show-silence {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* 锁屏按键 */
+.lock:focus-within .lock-page {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: calc(var(--box-height) - var(--display-layer-padding) * 2);
+  width: calc(var(--box-width) - var(--display-layer-padding) * 2);
+}
+
+/* 微信 */
 .wechat:focus-within {
   width: 100%;
   height: 100%;
   background-image: url('../images/wechat.jpeg');
+  background-size: contain;
+}
+
+/* 设置 */
+.setting:focus-within {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/setting.png');
+  background-size: contain;
+}
+
+/* 设置 */
+.safari:focus-within {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/safari.jpeg');
   background-size: contain;
 }
