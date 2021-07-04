@@ -9,6 +9,11 @@
   --frame-layer-three-padding: 5px;
   --frame-layer-four-padding: 10px;
   --display-layer-padding: calc(var(--container-padding) + var(--frame-layer-one-padding) + var(--frame-layer-two-padding) + var(--frame-layer-three-padding) + var(--frame-layer-four-padding));
+  --display-width: calc(var(--box-width) - var(--display-layer-padding) * 2);
+  --display-height: calc(var(--box-height) - var(--display-layer-padding) * 2);
+  --display-icon-width: 51px;
+  --display-icon-height: 51px;
+  --display-icon-radius: 11px;
 
 
   /* color */
@@ -25,7 +30,7 @@
   --antenna-bg-color: #3a3a3a;
   --button-left-bg-color: linear-gradient(to right, white, black);
   --button-right-bg-color: linear-gradient(to left, white, black);
-  --click-animation-bg-color: rgba(0, 0, 0, 0.2);
+  --sounds-show-bg-color: #99adc2;
 
 
 

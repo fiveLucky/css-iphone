@@ -174,7 +174,7 @@ input {
   transform: translate(-50%, -50%);
   width: 180px;
   height: 180px;
-  background: #99adc2;
+  background: var(--sounds-show-bg-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -223,7 +223,7 @@ input {
   transform: translate(-50%, -50%);
   width: 180px;
   height: 180px;
-  background: #99adc2;
+  background: var(--sounds-show-bg-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -256,8 +256,8 @@ input {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: calc(var(--box-height) - var(--display-layer-padding) * 2);
-  width: calc(var(--box-width) - var(--display-layer-padding) * 2);
+  height: var(--display-height);
+  width: var(--display-width);
   border-radius: 25px;
   background-image: url('../images/home.jpeg');
   background-size: contain;
@@ -337,7 +337,7 @@ input {
 }
 
 
-.wechat {
+.icon-box {
   position: absolute;
   width: 0;
   height: 0;
@@ -352,41 +352,20 @@ input {
   bottom: 25px;
   right: 63px;
   z-index: 10;
-  width: 51px;
-  height: 51px;
-  border-radius: 11px;
+  width: var(--display-icon-width);
+  height: var(--display-icon-height);
+  border-radius: var(--display-icon-radius);
 }
 
-
-.setting {
-  position: absolute;
-  width: 0;
-  height: 0;
-  right: 0;
-  bottom: 0;
-  transition: all 0.5s;
-  border-radius: 25px;
-}
 
 .setting-icon {
   position: absolute;
   top: -399px;
   right: 25px;
   z-index: 10;
-  width: 51px;
-  height: 51px;
-  border-radius: 11px;
-}
-
-
-.safari {
-  position: absolute;
-  width: 0;
-  height: 0;
-  right: 0;
-  bottom: 0;
-  transition: all 0.5s;
-  border-radius: 25px;
+  width: var(--display-icon-width);
+  height: var(--display-icon-height);
+  border-radius: var(--display-icon-radius);
 }
 
 .safari-icon {
@@ -394,9 +373,9 @@ input {
   bottom: 25px;
   right: 139px;
   z-index: 10;
-  width: 51px;
-  height: 51px;
-  border-radius: 11px;
+  width: var(--display-icon-width);
+  height: var(--display-icon-height);
+  border-radius: var(--display-icon-radius);
 }
 
 /* 按键交互 */
@@ -426,8 +405,8 @@ input {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: calc(var(--box-height) - var(--display-layer-padding) * 2);
-  width: calc(var(--box-width) - var(--display-layer-padding) * 2);
+  height: var(--display-height);
+  width: var(--display-width);
 }
 
 /* 微信 */
