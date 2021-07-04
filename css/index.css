@@ -4,54 +4,129 @@ div {
 
 .container {
   position: relative;
-  width: var(--boxWidth);
-  height: var(--boxHeight);
+  width: var(--box-width);
+  height: var(--box-height);
   margin: 0 auto;
-  background-color: var(--containerBgColor);
+  background-color: var(--container-bg-color);
   margin-top: 100px;
   border-radius: 50px;
-  padding: var(--containerPadding);
+  padding: var(--container-padding);
 }
 
 
 .layer-one {
   width: 100%;
   height: 100%;
-  background-color: var(--layerOneBgColor);
+  background-color: var(--layer-one-bg-color);
   border-radius: 50px;
-  padding: var(--layerOnePadding);
+  padding: var(--layer-one-padding);
   filter: blur(1px);
 }
 
 .layer-two {
   width: 100%;
   height: 100%;
-  background-color: var(--layerTwoBgColor);
+  background-color: var(--layer-two-bg-color);
   border-radius: 43px;
-  padding: var(--layerTwoPadding);
+  padding: var(--layer-two-padding);
 }
 
 .layer-three {
   width: 100%;
   height: 100%;
-  background-color: var(--layerThreeBgColor);
+  background-color: var(--layer-three-bg-color);
   border-radius: 45px;
-  padding: var(--layerThreePadding);
+  padding: var(--layer-three-padding);
   filter: blur(1px);
 }
 
 .layer-four {
   width: 100%;
   height: 100%;
-  background-color: var(--layerFourBgColor);
+  background-color: var(--layer-four-bg-color);
   border-radius: 31px;
   filter: blur(1px);
-  padding: var(--layerFourPadding)
+  padding: var(--layer-four-padding);
 }
 
 .layer-five {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: calc(var(--box-height) - var(--layer-five-padding) * 2);
+  width: calc(var(--box-width) - var(--layer-five-padding) * 2);
+  background-image: url('../images/home.jpeg');
+  background-size: contain;
+  border-radius: 25px;
+}
+
+.forehead {
+  position: relative;
+  width: 50%;
+  height: 26px;
+  background: var(--forehead-bg-color);
+  border-radius: 0 0 22px 22px;
+  margin: 0 auto;
+  padding-top: 5px;
+}
+
+.forehead::before {
+  content: " ";
+  position: absolute;
+  left: -2px;
+  top: 0;
+  width: 13px;
+  height: 5px;
+  background: var(--forehead-bg-color);
+  transform: rotate(45deg);
+}
+
+.forehead::after {
+  content: " ";
+  position: absolute;
+  right: -2px;
+  top: 0;
+  width: 13px;
+  height: 5px;
+  background: var(--forehead-bg-color);
+  transform: rotate(-45deg);
+}
+
+.phone-receiver {
+  margin: 0 auto;
+  width: 27%;
+  height: 6px;
+  border-radius: 5px;
+  background: var(--phone-receiver-bg-color);
+}
+
+.camera {
+  position: absolute;
+  top: -2px;
+  left: 66%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgb(32, 32, 32);
+  border: 1px solid rgb(32, 32, 32);
+  padding: 2px;
+  transform: scale(0.7);
+}
+
+.camera-layer-one {
   width: 100%;
   height: 100%;
-  background-image: url('../images/bizhi.jpeg');
-  border-radius: 25px;
+  background: rgb(49 49 49);
+  padding: 3px;
+  border-radius: 50%;
+}
+
+.camera-layer-two {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, white, #3f3fff, #9100ff);
+  padding: 2px;
+  border-radius: 50%;
+  filter: opacity(0.6);
 }

@@ -1,24 +1,24 @@
 :root {
 
   /* size */
-  --boxWidth: 375px;
-  --boxHeight: 812px;
-  --containerPadding: 3px;
-  --layerOnePadding: 2px;
-  --layerTwoPadding: 3px;
-  --layerThreePadding: 5px;
-  --layerFourPadding: 10px;
+  --box-width: 375px;
+  --box-height: 758px;
+  --container-padding: 3px;
+  --layer-one-padding: 2px;
+  --layer-two-padding: 3px;
+  --layer-three-padding: 5px;
+  --layer-four-padding: 10px;
+  --layer-five-padding: calc(var(--container-padding) + var(--layer-one-padding) + var(--layer-two-padding) + var(--layer-three-padding) + var(--layer-four-padding));
 
 
   /* color */
-  --containerBgColor: rgba(0, 0, 0, 0.8);
-  --layerOneBgColor: rgb(255, 255, 255);
-  --layerTwoBgColor: rgba(0, 0, 0);
-  --layerThreeBgColor: rgb(255, 255, 255, 0.8);
-  --layerFourBgColor: rgba(0, 0, 0);
+  --container-bg-color: rgba(0, 0, 0, 0.8);
+  --layer-one-bg-color: rgb(255, 255, 255);
+  --layer-two-bg-color: rgba(0, 0, 0);
+  --layer-three-bg-color: rgb(255, 255, 255, 0.8);
+  --layer-four-bg-color: rgba(0, 0, 0);
+  --forehead-bg-color: rgba(0, 0, 0);
+  --phone-receiver-bg-color: rgba(82, 82, 82, 0.4);
 
 
-  /* gradient */
-  --blurHorizontalBackground: linear-gradient(to right, var(--layerOneBgColor), var(--layerOneBlurColor), var(--layerTwoBgColor));
-  --blurVerticalBackground: linear-gradient(to bottom, var(--layerOneBgColor), var(--layerOneBlurColor), var(--layerTwoBgColor));
 }
