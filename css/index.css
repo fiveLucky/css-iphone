@@ -183,3 +183,47 @@ div {
   width: 7px;
   background: var(--antenna-bg-color);
 }
+
+.sounds-switch {
+  position: absolute;
+  left: -3px;
+  top: 100px;
+  height: 40px;
+  width: 5px;
+  background: var(--button-left-bg-color);
+  border-radius: 4px 0 0 4px;
+  border: 1px solid var(--container-bg-color);
+}
+
+.sounds-add {
+  position: absolute;
+  left: -3px;
+  top: 170px;
+  height: 66px;
+  width: 5px;
+  background: var(--button-left-bg-color);
+  border-radius: 4px 0 0 4px;
+  border: 1px solid var(--container-bg-color);
+}
+
+.sounds-reduce {
+  position: absolute;
+  left: -3px;
+  top: 255px;
+  height: 66px;
+  width: 5px;
+  background: var(--button-left-bg-color);
+  border-radius: 4px 0 0 4px;
+  border: 1px solid var(--container-bg-color);
+}
+
+.power {
+  position: absolute;
+  right: -3px;
+  top: 200px;
+  height: 100px;
+  width: 5px;
+  background: var(--button-right-bg-color);
+  border-radius: 0 4px 4px 0;
+  border: 1px solid var(--container-bg-color);
+}

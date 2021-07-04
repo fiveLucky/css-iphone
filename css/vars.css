@@ -23,6 +23,6 @@
   --camera-layer-one-bg-color: rgb(49, 49, 49);
   --camera-layer-two-bg-color: linear-gradient(135deg, white, #3f3fff, #00ff7e);
   --antenna-bg-color: #3a3a3a;
-
-
+  --button-left-bg-color: linear-gradient(to right, white, black);
+  --button-right-bg-color: linear-gradient(to left, white, black);
 }
