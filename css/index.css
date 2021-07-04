@@ -13,6 +13,7 @@ div {
   padding: var(--container-padding);
 }
 
+/* frame */
 
 .frame-layer-one {
   width: 100%;
@@ -49,6 +50,125 @@ div {
   padding: var(--frame-layer-four-padding);
 }
 
+/* 天线 */
+.antennas-top {
+  position: absolute;
+  top: 0;
+  right: 60px;
+  width: 5px;
+  height: 7px;
+  background: var(--antenna-bg-color);
+}
+
+.antennas-left-top {
+  position: absolute;
+  left: 0;
+  top: 60px;
+  height: 5px;
+  width: 7px;
+  background: var(--antenna-bg-color);
+}
+
+.antennas-left-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 60px;
+  height: 5px;
+  width: 7px;
+  background: var(--antenna-bg-color);
+}
+
+.antennas-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 60px;
+  width: 5px;
+  height: 7px;
+  background: var(--antenna-bg-color);
+}
+
+.antennas-right-top {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  height: 5px;
+  width: 7px;
+  background: var(--antenna-bg-color);
+}
+
+.antennas-right-bottom {
+  position: absolute;
+  right: 0;
+  bottom: 60px;
+  height: 5px;
+  width: 7px;
+  background: var(--antenna-bg-color);
+}
+
+/* 按键 */
+
+.buttons a {
+  display: block;
+  box-sizing: border-box;
+}
+
+.buttons a:not(.power):active {
+  left: -2px;
+}
+
+.buttons a.power:active {
+  right: -2px;
+}
+
+.sounds-switch {
+  position: absolute;
+  left: -3px;
+  top: 100px;
+  height: 40px;
+  width: 5px;
+  background: var(--button-left-bg-color);
+  border-radius: 4px 0 0 4px;
+  border: 1px solid var(--container-bg-color);
+}
+
+.sounds-add {
+  position: absolute;
+  left: -3px;
+  top: 170px;
+  height: 66px;
+  width: 5px;
+  background: var(--button-left-bg-color);
+  border-radius: 4px 0 0 4px;
+  border: 1px solid var(--container-bg-color);
+  cursor: pointer;
+}
+
+.sounds-reduce {
+  position: absolute;
+  left: -3px;
+  top: 255px;
+  height: 66px;
+  width: 5px;
+  background: var(--button-left-bg-color);
+  border-radius: 4px 0 0 4px;
+  border: 1px solid var(--container-bg-color);
+  cursor: pointer;
+}
+
+.power {
+  position: absolute;
+  right: -3px;
+  top: 200px;
+  height: 100px;
+  width: 5px;
+  background: var(--button-right-bg-color);
+  border-radius: 0 4px 4px 0;
+  border: 1px solid var(--container-bg-color);
+  cursor: pointer;
+}
+
+/* 屏幕显示 */
+
 .display-layer {
   position: absolute;
   top: 50%;
@@ -62,7 +182,11 @@ div {
 }
 
 .forehead {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
   width: 50%;
   height: 26px;
   background: var(--forehead-bg-color);
@@ -130,100 +254,42 @@ div {
   filter: opacity(0.6);
 }
 
-.antennas-top {
-  position: absolute;
-  top: 0;
-  right: 60px;
-  width: 5px;
-  height: 7px;
-  background: var(--antenna-bg-color);
+.screen input.wechat:active {
+  background: rgba(0, 0, 0, 0.2);
 }
 
-.antennas-left-top {
+
+
+.wechat-icon {
+  display: block;
   position: absolute;
-  left: 0;
-  top: 60px;
-  height: 5px;
-  width: 7px;
-  background: var(--antenna-bg-color);
+  bottom: 25px;
+  right: 63px;
+  z-index: 10;
+  width: 51px;
+  height: 51px;
+  /* background-color: black; */
+  border-radius: 11px;
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  padding: 0;
+  border: 0;
+  color: transparent;
 }
 
-.antennas-left-bottom {
+.wechat {
   position: absolute;
-  left: 0;
-  bottom: 60px;
-  height: 5px;
-  width: 7px;
-  background: var(--antenna-bg-color);
-}
-
-.antennas-bottom {
-  position: absolute;
+  width: 0;
+  height: 0;
+  right: 0;
   bottom: 0;
-  left: 60px;
-  width: 5px;
-  height: 7px;
-  background: var(--antenna-bg-color);
+  transition: all 0.5s;
 }
 
-.antennas-right-top {
-  position: absolute;
-  right: 0;
-  top: 60px;
-  height: 5px;
-  width: 7px;
-  background: var(--antenna-bg-color);
-}
-
-.antennas-right-bottom {
-  position: absolute;
-  right: 0;
-  bottom: 60px;
-  height: 5px;
-  width: 7px;
-  background: var(--antenna-bg-color);
-}
-
-.sounds-switch {
-  position: absolute;
-  left: -3px;
-  top: 100px;
-  height: 40px;
-  width: 5px;
-  background: var(--button-left-bg-color);
-  border-radius: 4px 0 0 4px;
-  border: 1px solid var(--container-bg-color);
-}
-
-.sounds-add {
-  position: absolute;
-  left: -3px;
-  top: 170px;
-  height: 66px;
-  width: 5px;
-  background: var(--button-left-bg-color);
-  border-radius: 4px 0 0 4px;
-  border: 1px solid var(--container-bg-color);
-}
-
-.sounds-reduce {
-  position: absolute;
-  left: -3px;
-  top: 255px;
-  height: 66px;
-  width: 5px;
-  background: var(--button-left-bg-color);
-  border-radius: 4px 0 0 4px;
-  border: 1px solid var(--container-bg-color);
-}
-
-.power {
-  position: absolute;
-  right: -3px;
-  top: 200px;
-  height: 100px;
-  width: 5px;
-  background: var(--button-right-bg-color);
-  border-radius: 0 4px 4px 0;
-  border: 1px solid var(--container-bg-color);
+.wechat:focus-within {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/wechat.jpeg');
+  background-size: contain;
 }
