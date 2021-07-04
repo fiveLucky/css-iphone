@@ -14,48 +14,48 @@ div {
 }
 
 
-.layer-one {
+.frame-layer-one {
   width: 100%;
   height: 100%;
-  background-color: var(--layer-one-bg-color);
+  background-color: var(--frame-layer-one-bg-color);
   border-radius: 50px;
-  padding: var(--layer-one-padding);
+  padding: var(--frame-layer-one-padding);
   filter: blur(1px);
 }
 
-.layer-two {
+.frame-layer-two {
   width: 100%;
   height: 100%;
-  background-color: var(--layer-two-bg-color);
+  background-color: var(--frame-layer-two-bg-color);
   border-radius: 43px;
-  padding: var(--layer-two-padding);
+  padding: var(--frame-layer-two-padding);
 }
 
-.layer-three {
+.frame-layer-three {
   width: 100%;
   height: 100%;
-  background-color: var(--layer-three-bg-color);
+  background-color: var(--frame-layer-three-bg-color);
   border-radius: 45px;
-  padding: var(--layer-three-padding);
+  padding: var(--frame-layer-three-padding);
   filter: blur(1px);
 }
 
-.layer-four {
+.frame-layer-four {
   width: 100%;
   height: 100%;
-  background-color: var(--layer-four-bg-color);
+  background-color: var(--frame-layer-four-bg-color);
   border-radius: 31px;
   filter: blur(1px);
-  padding: var(--layer-four-padding);
+  padding: var(--frame-layer-four-padding);
 }
 
-.layer-five {
+.display-layer {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: calc(var(--box-height) - var(--layer-five-padding) * 2);
-  width: calc(var(--box-width) - var(--layer-five-padding) * 2);
+  height: calc(var(--box-height) - var(--display-layer-padding) * 2);
+  width: calc(var(--box-width) - var(--display-layer-padding) * 2);
   background-image: url('../images/home.jpeg');
   background-size: contain;
   border-radius: 25px;
@@ -109,7 +109,7 @@ div {
   height: 20px;
   border-radius: 50%;
   background: var(--camera-bg-color);
-  padding: 2px;
+  padding: 3px;
   transform: scale(0.7);
 }
 

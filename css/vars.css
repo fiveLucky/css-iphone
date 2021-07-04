@@ -4,19 +4,19 @@
   --box-width: 375px;
   --box-height: 758px;
   --container-padding: 3px;
-  --layer-one-padding: 2px;
-  --layer-two-padding: 3px;
-  --layer-three-padding: 5px;
-  --layer-four-padding: 10px;
-  --layer-five-padding: calc(var(--container-padding) + var(--layer-one-padding) + var(--layer-two-padding) + var(--layer-three-padding) + var(--layer-four-padding));
+  --frame-layer-one-padding: 2px;
+  --frame-layer-two-padding: 3px;
+  --frame-layer-three-padding: 5px;
+  --frame-layer-four-padding: 10px;
+  --display-layer-padding: calc(var(--container-padding) + var(--frame-layer-one-padding) + var(--frame-layer-two-padding) + var(--frame-layer-three-padding) + var(--frame-layer-four-padding));
 
 
   /* color */
   --container-bg-color: rgba(0, 0, 0, 0.8);
-  --layer-one-bg-color: rgb(255, 255, 255);
-  --layer-two-bg-color: rgba(0, 0, 0);
-  --layer-three-bg-color: rgb(255, 255, 255, 0.8);
-  --layer-four-bg-color: rgba(0, 0, 0);
+  --frame-layer-one-bg-color: rgb(255, 255, 255);
+  --frame-layer-two-bg-color: rgba(0, 0, 0);
+  --frame-layer-three-bg-color: rgb(255, 255, 255, 0.8);
+  --frame-layer-four-bg-color: rgba(0, 0, 0);
   --forehead-bg-color: rgba(0, 0, 0);
   --phone-receiver-bg-color: rgba(82, 82, 82, 0.4);
   --camera-bg-color: rgb(32, 32, 32);
