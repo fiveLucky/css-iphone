@@ -1,5 +1,4 @@
 :root {
-
   /* size */
   --box-width: 375px;
   --box-height: 758px;
@@ -8,13 +7,22 @@
   --frame-layer-two-padding: 3px;
   --frame-layer-three-padding: 5px;
   --frame-layer-four-padding: 10px;
-  --display-layer-padding: calc(var(--container-padding) + var(--frame-layer-one-padding) + var(--frame-layer-two-padding) + var(--frame-layer-three-padding) + var(--frame-layer-four-padding));
-  --display-width: calc(var(--box-width) - var(--display-layer-padding) * 2);
-  --display-height: calc(var(--box-height) - var(--display-layer-padding) * 2);
+  --display-layer-padding: calc(
+    var(--container-padding) + var(--frame-layer-one-padding) +
+      var(--frame-layer-two-padding) + var(--frame-layer-three-padding) +
+      var(--frame-layer-four-padding)
+  );
+  --display-layer-width: calc(
+    var(--box-width) - var(--display-layer-padding) * 2
+  );
+  --display-layer-height: calc(
+    var(--box-height) - var(--display-layer-padding) * 2
+  );
   --display-icon-width: 51px;
   --display-icon-height: 51px;
   --display-icon-radius: 11px;
-
+  --button-border-radius: 4px;
+  --sounds-display-size: 180px;
 
   /* color */
   --container-bg-color: rgba(0, 0, 0, 0.8);
@@ -31,7 +39,4 @@
   --button-left-bg-color: linear-gradient(to right, white, black);
   --button-right-bg-color: linear-gradient(to left, white, black);
   --sounds-show-bg-color: #99adc2;
-
-
-
 }

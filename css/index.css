@@ -27,8 +27,6 @@ input {
 /* frame */
 
 .frame-layer-one {
-  width: 100%;
-  height: 100%;
   background-color: var(--frame-layer-one-bg-color);
   border-radius: 50px;
   padding: var(--frame-layer-one-padding);
@@ -36,16 +34,12 @@ input {
 }
 
 .frame-layer-two {
-  width: 100%;
-  height: 100%;
   background-color: var(--frame-layer-two-bg-color);
   border-radius: 43px;
   padding: var(--frame-layer-two-padding);
 }
 
 .frame-layer-three {
-  width: 100%;
-  height: 100%;
   background-color: var(--frame-layer-three-bg-color);
   border-radius: 45px;
   padding: var(--frame-layer-three-padding);
@@ -53,8 +47,6 @@ input {
 }
 
 .frame-layer-four {
-  width: 100%;
-  height: 100%;
   background-color: var(--frame-layer-four-bg-color);
   border-radius: 31px;
   filter: blur(1px);
@@ -118,7 +110,6 @@ input {
 
 /* 按键 */
 
-
 .sounds-switch {
   position: absolute;
   left: -3px;
@@ -126,7 +117,7 @@ input {
   height: 40px;
   width: 5px;
   background: var(--button-left-bg-color);
-  border-radius: 4px 0 0 4px;
+  border-radius: var(--button-border-radius) 0 0 var(--button-border-radius);
   border: 1px solid var(--container-bg-color);
 }
 
@@ -137,7 +128,7 @@ input {
   height: 66px;
   width: 5px;
   background: var(--button-left-bg-color);
-  border-radius: 4px 0 0 4px;
+  border-radius: var(--button-border-radius) 0 0 var(--button-border-radius);
   border: 1px solid var(--container-bg-color);
   cursor: pointer;
 }
@@ -149,7 +140,7 @@ input {
   height: 66px;
   width: 5px;
   background: var(--button-left-bg-color);
-  border-radius: 4px 0 0 4px;
+  border-radius: var(--button-border-radius) 0 0 var(--button-border-radius);
   border: 1px solid var(--container-bg-color);
   cursor: pointer;
 }
@@ -161,19 +152,15 @@ input {
   height: 100px;
   width: 5px;
   background: var(--button-right-bg-color);
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 var(--button-border-radius) var(--button-border-radius) 0;
   border: 1px solid var(--container-bg-color);
   cursor: pointer;
 }
 
 .sounds-show {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   z-index: 10;
-  transform: translate(-50%, -50%);
-  width: 180px;
-  height: 180px;
+  width: var(--sounds-display-size);
+  height: var(--sounds-display-size);
   background: var(--sounds-show-bg-color);
   display: flex;
   flex-direction: column;
@@ -185,7 +172,6 @@ input {
   visibility: hidden;
   transition: opacity 0.2s linear;
 }
-
 
 .text {
   font-size: 18px;
@@ -215,35 +201,11 @@ input {
   border-right: 0;
 }
 
-.sounds-show-silence {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 10;
-  transform: translate(-50%, -50%);
-  width: 180px;
-  height: 180px;
-  background: var(--sounds-show-bg-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 20px;
-  padding: 20px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s linear;
-}
-
-
 .lock-page {
-  position: absolute;
-  top: 0;
-  left: 0;
   z-index: 50;
   width: 0;
   height: 0;
-  background-image: url('../images/lock.png');
+  background-image: url("../images/lock.png");
   background-size: contain;
   border-radius: 25px;
   overflow: hidden;
@@ -252,14 +214,10 @@ input {
 /* 屏幕显示 */
 
 .display-layer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: var(--display-height);
-  width: var(--display-width);
+  height: var(--display-layer-height);
+  width: var(--display-layer-width);
   border-radius: 25px;
-  background-image: url('../images/home.jpeg');
+  background-image: url("../images/home.jpeg");
   background-size: contain;
 }
 
@@ -320,22 +278,17 @@ input {
 }
 
 .camera-layer-one {
-  width: 100%;
-  height: 100%;
   background: var(--camera-layer-one-bg-color);
   padding: 3px;
   border-radius: 50%;
 }
 
 .camera-layer-two {
-  width: 100%;
-  height: 100%;
   background: var(--camera-layer-two-bg-color);
   padding: 2px;
   border-radius: 50%;
   filter: opacity(0.6);
 }
-
 
 .icon-box {
   position: absolute;
@@ -348,34 +301,18 @@ input {
 }
 
 .wechat-icon {
-  position: absolute;
   bottom: 25px;
   right: 63px;
-  z-index: 10;
-  width: var(--display-icon-width);
-  height: var(--display-icon-height);
-  border-radius: var(--display-icon-radius);
 }
 
-
 .setting-icon {
-  position: absolute;
   top: -399px;
   right: 25px;
-  z-index: 10;
-  width: var(--display-icon-width);
-  height: var(--display-icon-height);
-  border-radius: var(--display-icon-radius);
 }
 
 .safari-icon {
-  position: absolute;
   bottom: 25px;
   right: 139px;
-  z-index: 10;
-  width: var(--display-icon-width);
-  height: var(--display-icon-height);
-  border-radius: var(--display-icon-radius);
 }
 
 /* 按键交互 */
@@ -402,18 +339,15 @@ input {
 
 /* 锁屏按键 */
 .lock:focus-within .lock-page {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: var(--display-height);
-  width: var(--display-width);
+  height: var(--display-layer-height);
+  width: var(--display-layer-width);
 }
 
 /* 微信 */
 .wechat:focus-within {
   width: 100%;
   height: 100%;
-  background-image: url('../images/wechat.jpeg');
+  background-image: url("../images/wechat.jpeg");
   background-size: contain;
 }
 
@@ -421,14 +355,14 @@ input {
 .setting:focus-within {
   width: 100%;
   height: 100%;
-  background-image: url('../images/setting.png');
+  background-image: url("../images/setting.png");
   background-size: contain;
 }
 
-/* 设置 */
+/* 浏览器 */
 .safari:focus-within {
   width: 100%;
   height: 100%;
-  background-image: url('../images/safari.jpeg');
+  background-image: url("../images/safari.jpeg");
   background-size: contain;
 }
