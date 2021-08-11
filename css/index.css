@@ -207,10 +207,7 @@ input {
 }
 
 .lock-page {
-  position: absolute;
   top: -50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 50;
   height: var(--display-layer-height);
   width: var(--display-layer-width);
@@ -218,7 +215,7 @@ input {
   background-size: contain;
   border-radius: var(--display-layer-radius);
   overflow: hidden;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 /* 屏幕显示 */
@@ -300,6 +297,7 @@ input {
   filter: opacity(0.6);
 }
 
+/* app */
 .wechat-icon {
   bottom: 25px;
   right: 63px;
