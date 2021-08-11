@@ -18,11 +18,13 @@
   --display-layer-height: calc(
     var(--box-height) - var(--display-layer-padding) * 2
   );
+  --display-layer-radius: 25px;
   --display-icon-width: 51px;
   --display-icon-height: 51px;
   --display-icon-radius: 11px;
   --button-border-radius: 4px;
   --sounds-display-size: 180px;
+  --screen-position-top: 23px;
 
   /* color */
   --container-bg-color: rgba(0, 0, 0, 0.8);
